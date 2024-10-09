@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.13.0 on win32)" generated="2024-10-09T09:35:30.256370" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\Matheus\automacao_cac_tac\tests\test.robot">
+<test id="s1-t1" name="Enviar Formulário Com Sucesso" line="5">
+<kw name="Abrir Página do Formulário" owner="formTest">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-09T09:35:30.512589" level="INFO">Opening browser 'chrome' to base url 'https://cac-tat.s3.eu-central-1.amazonaws.com/index.html'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-09T09:35:30.512391" elapsed="2.492195"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-09T09:35:33.004886" elapsed="0.033910"/>
+</kw>
+<status status="PASS" start="2024-10-09T09:35:30.511830" elapsed="2.527096"/>
+</kw>
+<kw name="Preencher Campos Obrigatórios" owner="formTest">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T09:35:33.039771" level="INFO">Typing text 'Nome Exemplo' into text field 'id=firstName'.</msg>
+<arg>${NOME_INPUT}</arg>
+<arg>Nome Exemplo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T09:35:33.039487" elapsed="0.090085"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T09:35:33.129979" level="INFO">Typing text 'Sobrenome Exemplo' into text field 'id=lastName'.</msg>
+<arg>${SOBRENOME_INPUT}</arg>
+<arg>Sobrenome Exemplo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T09:35:33.129751" elapsed="0.061840"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T09:35:33.191989" level="INFO">Typing text 'exemplo@email.com' into text field 'id=email'.</msg>
+<arg>${EMAIL_INPUT}</arg>
+<arg>exemplo@email.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T09:35:33.191770" elapsed="0.056614"/>
+</kw>
+<status status="PASS" start="2024-10-09T09:35:33.039249" elapsed="0.209257"/>
+</kw>
+<kw name="Selecionar Produto" owner="formTest">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-10-09T09:35:33.249240" level="INFO">Selecting options from selection list 'xpath=//*[@id="product"]' by value cursos.</msg>
+<arg>${PRODUTO_DROPDOWN}</arg>
+<arg>cursos</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-10-09T09:35:33.249044" elapsed="0.059385"/>
+</kw>
+<status status="PASS" start="2024-10-09T09:35:33.248808" elapsed="0.059733"/>
+</kw>
+<kw name="Escolher Tipo de Atendimento Como Ajuda" owner="formTest">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-09T09:35:33.309267" level="INFO">Clicking element 'xpath=//input[@value='ajuda']'.</msg>
+<arg>${TIPO_ATENDIMENTO_AJUDA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T09:35:33.309076" elapsed="0.032227"/>
+</kw>
+<status status="PASS" start="2024-10-09T09:35:33.308827" elapsed="0.032587"/>
+</kw>
+<kw name="Selecionar Meio de Contato Preferencial Como E-mail" owner="formTest">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-09T09:35:33.342276" level="INFO">Clicking element 'xpath=//input[@value='email']'.</msg>
+<arg>${CONTATO_EMAIL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T09:35:33.342068" elapsed="0.028936"/>
+</kw>
+<status status="PASS" start="2024-10-09T09:35:33.341711" elapsed="0.029404"/>
+</kw>
+<kw name="Anexar Arquivo" owner="formTest">
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2024-10-09T09:35:33.371879" level="INFO">Sending C:\Users\Matheus\automacao_cac_tac\exemplo.txt to browser.</msg>
+<arg>${ANEXO_INPUT}</arg>
+<arg>${CAMINHO_ANEXO}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2024-10-09T09:35:33.371633" elapsed="0.021219"/>
+</kw>
+<status status="PASS" start="2024-10-09T09:35:33.371396" elapsed="0.021605"/>
+</kw>
+<kw name="Clicar em Enviar" owner="formTest">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-09T09:35:33.393704" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>${BOTAO_ENVIAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T09:35:33.393530" elapsed="0.040557"/>
+</kw>
+<status status="PASS" start="2024-10-09T09:35:33.393294" elapsed="0.040902"/>
+</kw>
+<status status="PASS" start="2024-10-09T09:35:30.511250" elapsed="2.923201"/>
+</test>
+<test id="s1-t2" name="Enviar Formulário Sem Preencher Campos Obrigatórios" line="14">
+<kw name="Abrir Página do Formulário" owner="formTest">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-09T09:35:33.435799" level="INFO">Opening browser 'chrome' to base url 'https://cac-tat.s3.eu-central-1.amazonaws.com/index.html'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-09T09:35:33.435639" elapsed="2.409432"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-09T09:35:35.845250" elapsed="0.023714"/>
+</kw>
+<status status="PASS" start="2024-10-09T09:35:33.435420" elapsed="2.433675"/>
+</kw>
+<kw name="Clicar em Enviar" owner="formTest">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-09T09:35:35.869870" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>${BOTAO_ENVIAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T09:35:35.869672" elapsed="0.049296"/>
+</kw>
+<status status="PASS" start="2024-10-09T09:35:35.869395" elapsed="0.049688"/>
+</kw>
+<status status="PASS" start="2024-10-09T09:35:33.435038" elapsed="2.484289"/>
+</test>
+<status status="PASS" start="2024-10-09T09:35:30.258195" elapsed="5.661854"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
